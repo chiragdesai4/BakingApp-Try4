@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Baking App</string>
+    <string name="steps_activity">Ingerdient &amp; Steps</string>
+
+    <string name="person_icon">Icon of a person.</string>
+    <string name="name">Name</string>
+    <string name="servings">Servings :</string>
+    <string name="step">Step :</string>
+    <string name="URL">https://d17h27t6h515a5.cloudfront.net/topher/2017/May/59121517_baking/baking.json</string>
+    <string name="extra">item</string>
+    <string name="dialog">Please Wait ...</string>
+    <string name="GET">GET</string>
+    <string name="next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="configure">Configure</string>
+</resources>
