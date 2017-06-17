@@ -14,6 +14,8 @@ import com.example.android.bakingapp.R;
 import com.example.android.bakingapp.model.Step;
 import com.squareup.picasso.Picasso;
 
+import static com.example.android.bakingapp.ui.BakesFragment.bakes;
+
 /**
  * Created by Chirag Desai on 14-06-2017.
  */
@@ -77,6 +79,8 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ArticleViewH
             if (!steps.isEmpty()) {
                 if(!steps.get(position).getThumbnailURL().isEmpty()) {
                     Picasso.with(itemView.getContext()).load(steps.get(position).getThumbnailURL()).error(R.drawable.ic_insert_image).into(icon);
+                    name.setText(bakes.get(position).getName());
+                    servings.setText(itemView.getContext().getString(R.string.servings) + " " + bakes.get(position).getServings());
                 }else{
                     icon.setImageResource(R.drawable.ic_insert_image);
                 }

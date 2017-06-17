@@ -1,4 +1,4 @@
-package com.amg.bakingapp.ui;
+package com.example.android.bakingapp.ui;
 
 
 import android.support.test.espresso.ViewInteraction;
