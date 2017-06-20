@@ -2,6 +2,7 @@ package com.example.android.bakingapp.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +78,10 @@ public class BakesAdapter extends RecyclerView.Adapter<BakesAdapter.ArticleViewH
         void onBind(int position) {
             if (!bakes.isEmpty()) {
                 Picasso.with(itemView.getContext()).load(bakes.get(position).getImage()).into(icon);
+                String imagePath = bakes.get(position).getImage();
+                if (!TextUtils.isEmpty(imagePath)) {
+                    Picasso.with(itemView.getContext()).load(imagePath).into(icon);
+                }
                 name.setText(bakes.get(position).getName());
                 servings.setText(itemView.getContext().getString(R.string.servings) + " " + bakes.get(position).getServings());
             }

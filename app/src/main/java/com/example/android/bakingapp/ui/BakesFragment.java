@@ -1,5 +1,6 @@
 package com.example.android.bakingapp.ui;
 
+import android.content.Context;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -14,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.android.bakingapp.R;
 import com.example.android.bakingapp.adapter.BakesAdapter;
@@ -37,9 +39,10 @@ import static com.example.android.bakingapp.ui.MainActivity.isTablet;
 public class BakesFragment extends Fragment implements BakesAdapter.ListItemClickListener {
 
     public static ArrayList<Bake> bakes = new ArrayList<>();
+    private Context context;
     private RecyclerView recyclerView;
     private BakesAdapter adapter;
-    private View rootView;
+    public View rootView;
 
     public BakesFragment() {
     }
